@@ -40,6 +40,7 @@ public class MyStepdefs {
     }
     @Given("I am on the homepage page")
     public void i_am_on_the_homepage_page() {
+        homePage.verifyHomePage();
 
     }
     @When("I click on digital downloads")
@@ -56,6 +57,7 @@ public class MyStepdefs {
     }
     @When("I am on product page")
     public void i_am_on_product_page() {
+        productPage.verifyProductPage();
 
 
     }
@@ -66,16 +68,18 @@ public class MyStepdefs {
     }
     @Then("Email a friend page should appear")
     public void email_a_friend_page_should_appear() {
+        productPage.verifyEmailAFriendPage();
 
     }
     @Then("I enter Friend Email details")
     public void i_enter_friend_email_details() {
+        productPage.fillInEmailAFriendDetailsForRegisteredUser();
 
 
     }
     @Then("I click on Send Email")
     public void i_click_on_send_email() {
-        productPage.fillInEmailAFriendDetailsForRegisteredUser();
+        productPage.clickOnSendEmail();
 
     }
     @Then("A successfully sent email message should be displayed")
