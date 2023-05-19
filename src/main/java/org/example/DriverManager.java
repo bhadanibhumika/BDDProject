@@ -19,7 +19,8 @@ public class DriverManager extends Utils {
        else if (browserName.equalsIgnoreCase("firefox"))
        {
            driver = new FirefoxDriver();
-       }else if (browserName.equalsIgnoreCase("edge"))
+       }
+       else if (browserName.equalsIgnoreCase("edge"))
        {
           driver = new EdgeDriver();
        }
