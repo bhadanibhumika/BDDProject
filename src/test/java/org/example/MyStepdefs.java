@@ -3,6 +3,11 @@ package org.example;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+
+import java.util.concurrent.TimeUnit;
+
+import static org.example.BasePage.driver;
 
 public class MyStepdefs {
     HomePage homePage = new HomePage();
@@ -57,6 +62,9 @@ public class MyStepdefs {
     }
     @When("I am on product page")
     public void i_am_on_product_page() {
+
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
         productPage.verifyProductPage();
 
 
